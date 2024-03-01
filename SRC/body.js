@@ -7,6 +7,7 @@ export const main = () =>{
   section1.classList.add('section-1');
   const p = document.createElement('p');
   p.classList.add('p');
+  p.classList.add('p-o');
   p.textContent = "0" 
   const input = document.createElement('input');
   input.classList.add('input');
@@ -46,29 +47,29 @@ export const numeroRandom = () =>{
    }
   
    newRam.innerText = numRan;
+   console.log(numRan);
  
 }
 
-
-
 export const putNumber = (e) =>{
   const input1 = document.querySelector('.input');
-  const newP1 = document.querySelector(".p");
+  const newP1 = document.querySelector(".p-o");
+  const newP2 = document.querySelector(".foot-p");
   if (e.target.value === newP1.textContent) {
-    newP1.innerHTML = 'Lo lograste'
+    newP2.innerHTML = 'Lo lograste'
+    newP1.classList.toggle("p")
   } else {
-    newP1.innerHTML = 'Sigue intentando'
-    
+    newP2.innerHTML = 'Sigue intentando'
   }
-  
+
 }
 
-
 export const reseteo = () =>{
-  // const newSection2 = document.querySelector('.section-1');
-  const newP = document.querySelector(".p");
+  const clearInput = document.querySelector(".input")
+  const newP = document.querySelector(".p-o");
   newP.innerHTML = 0
-
+  clearInput.value = "";
+  newP.classList.add("p");
 }
 
 

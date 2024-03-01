@@ -1,17 +1,22 @@
 
 
-export const footer = () => {
+export const printFooter = () =>{
 
-  const footer = document.createElement("footer")
-  footer.id = "footer"
+  const foot = document.createElement('footer')
+  foot.id = "footer"
+  const footDiv = document.createElement("div");
+  footDiv.classList.add("foot-Div");
+  const footP = document.createElement("p");
+  footP.classList.add("foot-p");
+  footP.innerText = "hola caracola";
 
-  const p2 = document.createElement('p');
-  const div2 = document.createElement('div');
-  p2.innerText = "hola"
+  
+  foot.appendChild(footDiv);
+  footDiv.appendChild(footP);
 
-    div2.appendChild(p2);
-    footer.appendChild(div2);
-    
-    document.body.appendChild(footer)
+  document.body.appendChild(foot);
 
 }
+
+
+
